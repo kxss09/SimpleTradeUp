@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Trade Up Calculator</title>
+    <meta name="description" content="A Pure HTML Trade Up Calculator." />
+    <!-- css placement -->
+    <link rel="stylesheet" href="pico.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+    <!--Scripts-->
+    <script src="js/script.js"></script>
+    <script src="js/minimal-theme-switcher.js"></script>
+    <!--body-->
+    <style>
+     :root {
+    --pico-border-radius: 2rem;
+    --pico-typography-spacing-vertical: 1.5rem;
+    --pico-form-element-spacing-vertical: 1rem;
+    --pico-form-element-spacing-horizontal: 1.25rem;
+    } 
+    button {
+    --pico-font-weight: 700;
+    }
+    </style>
+  <nav>
+    <ul>
+        <a href="index.html" class="remleft">
+            <img src="asset/Kxss.jpg" alt="Kxss" width="48" height="48">
+          </a>
+      <li><strong>Kxss</strong></li>
+    </ul>
+    <ul>
+      <li> <details class="dropdown">
+        <summary role="button" class="contrast">Theme</summary>
+        <ul>
+          <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+          <li><a href="#" data-theme-switcher="light">Light</a></li>
+          <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+        </ul>
+      </details></li>
+      <li><a href="index1.html" class="contrast">About</a></li>
+      <li><a href="https://github.com/kxss09" class="contrast">Github</a></li>
+      <li><a href="https://x.com/kxss09" class="contrast remright">Twitter</a></li>
+    </ul>
+  </nav>
+  <body>
+    <header class = "container">
+      <section id = "buttons">
+        <h1 class="text-center remtop">Trade Up Calculators</h1>
+        <div style = "margin: 1rem"></div>
+        <p class = "grid">
+          <button class="secondary" onclick="showCalculator(1)">Simple Calculator</button>
+          <button class = "secondary" onclick="showCalculator(2)">Desired Float Calculator</button>
+          <button class = "secondary"onclick="showCalculator(3)"> Possibility Calculator</button>
+      </section>
+      <section id="calculators"></section>
+        <div id="calculator1" class="calculator-section" style="display: none;">
+          <!-- Simple Calculator content will go here -->
+          <h2>Simple Float</h2>
+          <p>
+            Baisc Float Calculator that Calculate the Average Float of the 10 Input Floats. The Float is a Number Between 0 - 1.0. 
+          </p>
+          <form id="simpleform">
+            <div class="grid">
+              <input
+                type="number"
+                name="floats1"
+                placeholder="Float 1"
+                class = "no-spinners"
+                required
+              />
+              <input
+                type="number"
+                name="floats2"
+                placeholder="Float 2"
+                class = "no-spinners"
+                required
+              />
+              <input
+                type="number"
+                name="floats3"
+                placeholder="Float 3"
+                class = "no-spinners"
+                required
+              />
+              <input
+                type="number"
+                name="floats4"
+                placeholder="Float 4"
+                class = "no-spinners"
+                required
+              />
+              <input
+                type="number"
+                name="floats5"
+                placeholder="Float 5"
+                class = "no-spinners"
+                required
+              />
+        </div>
+        <div class="grid">
+          <input
+            type="number"
+            name="floats6"
+            placeholder="Float 6"
+            class = "no-spinners"
+            required
+          />
+          <input
+            type="number"
+            name="floats7"
+            placeholder="Float 7"
+            class = "no-spinners"
+            required
+          />
+          <input
+            type="number"
+            name="floats8"
+            placeholder="Float 8"
+            class = "no-spinners"
+            required
+          />
+          <input
+            type="number"
+            name="floats9"
+            placeholder="Float 9"
+            class = "no-spinners"
+            required
+          />
+          <input
+            type="number"
+            name="floats10"
+            placeholder="Float 10"
+            class = "no-spinners"
+            required
+          />
+    </div>
+    <h4>Enter the Desired Item's Min and Max Float Possible</h4>
+    <div class="grid">
+      <input
+        type="number"
+        name="minfloat"
+        placeholder="Enter Min Float"
+        class = "no-spinners"
+        value="0"
+        required
+      />
+      <input
+        type="number"
+        name="maxfloat"
+        placeholder="Enter Max Float"
+        class = "no-spinners"
+        value="1"
+        required
+      />
+      <button type="button" onclick="calculateSimpleFloat()">Calculate</button>
+      <button type="reset">Clear</button>
+</div>
+</form>
+<div id="result" style="margin-top: 1rem;"></div>
+
+
+        <div id="calculator2" class="calculator-section" style="display: none;">
+          <!-- Desired Float Calculator content will go here -->
+          <h2>Desired Float Calculator</h2>
+          <!-- Add your calculator elements here -->
+        </div>
+
+        <div id="calculator3" class="calculator-section" style="display: none;">
+          <!-- Controlled Possibility Calculator content will go here -->
+          <h2>Controlled Possibility Calculator</h2>
+          <!-- Add your calculator elements here -->
+        </div>
+    </header>
+  </body>
+</html>
